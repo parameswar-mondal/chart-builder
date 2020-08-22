@@ -1,9 +1,15 @@
 {
-  "name": "chart-builder",
+  "name": "angular-chart-builder",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
     "tslib": "^1.10.0"
-  }
+  },
+  "description": "It is a very simple angular chart library.",
+  "author": {
+    "name": "Parameswar Mondal",
+    "email": "param23.03@gmail.com"
+  },
+  "keywords": ["Chart Builder", "Angular chart library", "parameswar"]
 }
