@@ -8,15 +8,32 @@ Chart builder is an angular chart library.
 
 # Chart
 
-Progress Bar
+- **Progress Bar**
+
+# Getting started
+
+First, install the latest stable version. 
+There is only one basic chart type, Progress Bar.
+Accept Properties : 
+- **data** - is a number type, indicate the percentage out of 100. **Required** property. 
+- **labels** - is a string type. Example: "Completed"
+- **width** - is a string type. Width of the progress bar. Example: "500px" or "80%"
+- **height** - is a string type. Height of the progress bar. Example: "50px" or "40%"
+- **chartType** - is a string type. Example: "progress"
+
+### Default Features
+
+The default width of Progress bar is 300px and default height is 30px.
 
 # Installation 
+
+For the latest stable version:
 
 `npm i angular-chart-builder`
 
 Then...
 
-app.module.ts
+**app.module.ts**
 
 ```
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +57,9 @@ export class AppModule { }
 
 ```
 
-app.component.ts
+then...
+
+**app.component.ts**
 
 ```
 import { Component } from '@angular/core';
@@ -63,7 +82,7 @@ export class AppComponent {
 
 then...
 
-app.component.html
+**app.component.html**
 
 ```
 <pm-chart-builder
@@ -75,4 +94,12 @@ app.component.html
     </pm-chart-builder>
 
 ```
+
+# Technical Support
+
+- param23.03@gmail.com
+
+# Licensing
+
+Free
 
