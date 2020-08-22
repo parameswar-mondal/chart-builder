@@ -2,23 +2,77 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
-## Code scaffolding
+# What is this?
 
-Run `ng generate component component-name --project chart-builder` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project chart-builder`.
-> Note: Don't forget to add `--project chart-builder` or else it will be added to the default project in your `angular.json` file. 
+Chart builder is an angular chart library. 
 
-## Build
+# Chart
 
-Run `ng build chart-builder` to build the project. The build artifacts will be stored in the `dist/` directory.
+Progress Bar
 
-## Publishing
+# Installation 
 
-After building your library with `ng build chart-builder`, go to the dist folder `cd dist/chart-builder` and run `npm publish`.
+`npm i angular-chart-builder`
 
-## Running unit tests
+Then...
 
-Run `ng test chart-builder` to execute the unit tests via [Karma](https://karma-runner.github.io).
+app.module.ts
 
-## Further help
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+import { AppComponent } from './app.component';
+import {ChartBuilderModule} from 'angular-chart-builder';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    ChartBuilderModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+app.component.ts
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Parameswar';
+  public chartLabels = 'Completed';
+  public chartData = 80;
+  public chartType = 'progress';
+  public chartWidth = '400px';
+  public chartHeight = '40px';
+}
+
+```
+
+then...
+
+app.component.html
+
+```
+<pm-chart-builder
+      [data]="chartData"
+      [labels]="chartLabels"
+      [width]="chartWidth"
+      [height]="chartHeight"
+      [chartType]="chartType">
+    </pm-chart-builder>
+
+```
+
