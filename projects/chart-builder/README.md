@@ -9,12 +9,14 @@ Chart builder is an angular chart library.
 # Chart
 
 - **Progress Bar**
+- **Pie Chart**
 
 # Getting started
 
 First, install the latest stable version. 
-There is only one basic chart type, Progress Bar.
-Accept Properties : 
+There are two basic chart types, Progress Bar and Pie Chart.
+
+# Accept Properties for Progress Bar : 
 - **data** - is a number type, indicate the percentage out of 100. **Required** property. 
 - **labels** - is a string type. Example: "Completed"
 - **width** - is a string type. Width of the progress bar. Example: "500px" or "80%"
@@ -24,6 +26,17 @@ Accept Properties :
 ### Default Features
 
 The default width of Progress bar is 300px and default height is 30px.
+
+# Accept Properties for Pie Chart : 
+- **data** - is an array type. **Required** property. 
+- **labels** - is a string type. Example: "Completed"
+- **width** - is a number type. Width of the Pie canvas. Example: 400 
+- **height** - is a string type. Height of the Pie canvas. Example: 400 
+- **chartType** - is a string type. Example: "pie"
+
+### Default Features
+
+The default width of Pie canvas is 400 and default height is 400. 
 
 # Installation 
 
@@ -92,6 +105,53 @@ then...
       [height]="chartHeight"
       [chartType]="chartType">
     </pm-chart-builder>
+
+```
+
+# Pie Chart integration
+
+app.module.ts keep as it is.
+
+then...
+
+**app.component.ts**
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  public pieLabels = 'Employees Salary';     // string type
+  public pieData = [
+    { name: 'param', value: 54000 },
+    { name: 'debo', value: 63000 },
+    { name: 'rahul', value: 60000 },
+    { name: 'biswa', value: 65000 },
+    { name: 'dipan', value: 62000 }
+  ];
+  public pieType = 'pie';   // string type
+  public pieWidth = 300;   // number type
+  public pieHeight = 300;  // number type
+}
+
+```
+
+then...
+
+**app.component.html**
+
+```
+<pm-pie-chart
+  [data]="pieData"
+  [labels]="pieLabels"
+  [width]="pieWidth"
+  [height]="pieHeight"
+  [chartType]="pieType">
+</pm-pie-chart>
 
 ```
 
