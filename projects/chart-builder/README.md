@@ -53,7 +53,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {ChartBuilderModule} from 'angular-chart-builder';
+import { ChartBuilderModule } from 'angular-chart-builder';
 
 @NgModule({
   declarations: [
@@ -125,13 +125,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public pieLabels = 'Employees Salary';     // string type
+  public pieLabels = 'Working hour in July';     // string type
   public pieData = [
-    { name: 'param', value: 54000 },
-    { name: 'debo', value: 63000 },
-    { name: 'rahul', value: 60000 },
-    { name: 'biswa', value: 65000 },
-    { name: 'dipan', value: 62000 }
+    { name: 'param', value: 176 },
+    { name: 'debo', value: 180 },
+    { name: 'rahul', value: 150 },
+    { name: 'biswa', value: 140 },
+    { name: 'dipan', value: 160 }
   ];
   public pieType = 'pie';   // string type
   public pieWidth = 300;   // number type
